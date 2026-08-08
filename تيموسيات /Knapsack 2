@@ -1,0 +1,60 @@
+#include "bits/stdc++.h"
+#define el '\n'
+#define ll long long
+#define int long long
+using namespace std;
+// Do not fight someone who still carries a living dream inside
+// متي اصبح الكابوس لديك حلم تتمتع به ؟
+const int N=1e5+55;
+int dp[105][N];int n,wi;
+int w[107],val[107];
+int clc(int i,int v) {
+    if (i==n) {
+       if (v==0)
+           return 0;
+
+        return 1e18;
+    }
+    int &ret = dp[i][v];
+    if (~ret) {
+        return ret;
+    }
+    ret=1e18;
+    ret=min(ret,clc(i+1,v));
+    if (v>=val[i])
+        ret=min(ret,w[i]+clc(i+1,v-val[i]));
+    return ret;
+}
+void solve() {
+    cin >> n>>wi;memset(dp,-1,sizeof(dp));
+    for (int i=0;i<n;i++) {
+        cin>>w[i]>>val[i];
+    }
+
+   for (int i=1e5;i>=0;i--) {
+       if (clc(0,i)<=wi) {
+           return void(cout<<i<<el);
+       }
+   }
+
+
+}
+
+
+/*
+
+2 44
+1 2 5
+
+ */
+int32_t main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int T = 1;
+
+    // freopen("milk.in", "r", stdin);
+    //freopen("output.txt", "w", stdout);
+//    cin >> T;
+    for (int i = 1; i <= T; i++)
+        solve();
+}
