@@ -1,5 +1,13 @@
-ماذا يفعل هذا الكود؟
-يقوم هذا الكود بحل حالة خاصة وسريعة من مسألة يوسيفوس (Josephus Problem). في هذه النسخة من اللعبة، يقف $n$ من الأشخاص في دائرة، ويتم استبعاد الشخص الثاني في كل مرة حتى يتبقى شخص واحد
+
+/*
+ * What does this code do?
+ * Solves a fast, special case of the Josephus Problem (where k = 2).
+ * 
+ * Game Rules:
+ * 'n' people stand in a circle. Every 2nd person is eliminated
+ * sequentially until only one survivor remains.
+ */
+
 #include "bits/stdc++.h"
 #define el '\n'
 #define ll long long
