@@ -1,6 +1,4 @@
-vector<int>
-get_previous_greater_element(vector<int>
-& a) {
+get_previous_greater_element(vector<int>& a) {
     int n = a.size();
     vector<int> nge(n, -1);
     stack<int> st;
