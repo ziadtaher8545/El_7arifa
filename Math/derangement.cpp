@@ -1,6 +1,5 @@
-// دالة لحساب عدد الاضطرابات (Derangements) لعنصر m
-// وظيفتها: تحسب كم طريقة لترتيب m من العناصر بحيث "ولا عنصر" يرجع لمكانه الأصلي
-long long get_derangement(int m) {
+// Function to calculate the number of derangements for m elements
+// Purpose: Calculates how many ways to arrange m elements such that "no element" returns to its original positionlong long get_derangement(int m) {
     if (m == 0) return 1;
     if (m == 1) return 0;
     
