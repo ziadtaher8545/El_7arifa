@@ -1,6 +1,6 @@
-الكود بيحدد بسرعة العقدة اللي هتوصلها بعد ما تمشي عدد $k$ من الخطوات من نقطة بداية معينة داخل جراف موجه (Functional Graph) باستخدام تقنية Binary Lifting.
-
-
+/* "The code quickly determines the node you will reach after taking $k$ steps
+from a specific starting point in a directed graph (Functional Graph) using the Binary Lifting technique."
+*/
 struct FG {
     int n, LOG = 30;
     int comp_cnt = 0;
