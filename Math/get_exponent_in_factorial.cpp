@@ -1,14 +1,23 @@
-ولا يهمك، خلينا نبسطها خالص وبدون أي مصطلحات معقدة.
-
-تخيل إنك بتضرب الأرقام من 1 لحد رقم معين في بعضها، وده اللي بنسميه المضروب (Factorial).
-مثلاً، مضروب الرقم 5 (وبيتكتب 5!) هو:
-1 × 2 × 3 × 4 × 5 = 120
-
-الكود ده وظيفته يجاوب على سؤال واحد بس: "الرقم 120 ده، جواه كام اتنين (2) مضروبين في بعض؟" أو بمعنى تاني: "أقدر أقسم 120 على 2 كام مرة ورا بعض من غير ما يطلعلي كسر؟"
-
-لو فككنا الأرقام اللي ضربناها في بعض عشان نجيب الـ 120:
-
-
+/*
+ * Calculates the highest exponent of a prime number 'p' in 'n!' (Legendre's Formula).
+ * 
+ * Concept:
+ * Imagine multiplying all numbers from 1 up to n (n!).
+ * For example, 5! = 1 * 2 * 3 * 4 * 5 = 120.
+ * 
+ * This code answers one question: 
+ * "How many times is prime 'p' multiplied inside n!?"
+ * Or: "How many consecutive times can I divide n! by 'p' without a fraction?"
+ * 
+ * Example breakdown for n = 5, p = 2:
+ *   - 1: Contains no factors of 2
+ *   - 2: Contains one 2
+ *   - 3: Contains no factors of 2
+ *   - 4: 2 * 2 -> Contains two 2s
+ *   - 5: Contains no factors of 2
+ * 
+ * Total count: 1 + 2 = 3 factors of 2 (meaning 2^3 = 8 divides 120 cleanly).
+ */
   
 int64_t get_exponent_in_factorial(int n, int p)
 {
