@@ -1,4 +1,3 @@
-vector<int>
 get_next_smaller_element(vector<int>& a) {
     int n = a.size();
     vector<int> nge(n, -1);
