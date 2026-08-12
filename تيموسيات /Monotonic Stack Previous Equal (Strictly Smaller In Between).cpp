@@ -1,4 +1,3 @@
-vector<int>
 get_prev_equal_smaller_between(vector<int>& a) {
     int n = a.size();
     vector<int> eq(n, -1);
